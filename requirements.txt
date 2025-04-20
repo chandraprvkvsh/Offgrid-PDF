@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+python-multipart
+sqlalchemy
+pydantic
+pydantic_settings
+faiss-cpu
+langchain
+langchain-community
+pypdf2
+requests
+python-jose
+asyncpg
+sse-starlette
