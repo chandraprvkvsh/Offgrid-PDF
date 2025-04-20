@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #0c71c9;
+  --primary-light: #4da8ff;
+  --dark-bg: #121212;
+  --dark-surface: #1e1e1e;
+  --dark-surface-light: #2d2d2d;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--dark-bg);
+  color: #ffffff;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  background-color: var(--dark-surface-light);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: var(--dark-surface);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-surface);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.pulse-animation {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .5; }
+}
+
+/* Button styles */
+.btn {
+  @apply px-4 py-2 rounded-md font-medium transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-opacity-50;
+}
+
+.btn-primary {
+  @apply bg-primary text-white hover:bg-primary-dark focus:ring-primary;
+}
+
+.btn-secondary {
+  @apply bg-dark-lighter text-white hover:bg-dark-light focus:ring-dark-light;
+}
+
+.btn-outline {
+  @apply border border-white bg-transparent hover:bg-dark-lighter focus:ring-white;
+}
+
+/* Utility classes */
+.min-h-screen-with-header {
+  min-height: calc(100vh - 64px);
+}
+
+/* Responsive text sizing */
+@media (max-width: 640px) {
+  .text-3xl {
+    font-size: 1.5rem;
+  }
+  .text-2xl {
+    font-size: 1.25rem;
+  }
+  .text-xl {
+    font-size: 1.125rem;
+  }
+}
+
+/* Card styling */
+.card {
+  @apply bg-dark-lighter rounded-lg shadow-md p-4 transition-all duration-300 hover:shadow-lg;
+}
+
+/* Input styling */
+.input-dark {
+  @apply bg-dark-lighter border-gray-600 text-white placeholder-gray-400 focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50;
+}
