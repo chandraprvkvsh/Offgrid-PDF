@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 
 class VectorDatabase:
     def __init__(self):
-        self.embeddings = OllamaEmbeddings(model=settings.EMBEDDING_MODEL)
+        self.embeddings = OllamaEmbeddings(model=settings.EMBEDDING_MODEL, base_url=settings.OLLAMA_BASE_URL)
         self.index_path = os.path.join(settings.DATA_DIR, settings.VECTOR_DB_PATH)
         self._db = None
     

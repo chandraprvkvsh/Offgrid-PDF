@@ -52,7 +52,30 @@ ollama pull mxbai-embed-large
 ollama serve
 ```
 
-### 4. Set Up Backend
+### 4. Choose Your Setup Method
+
+You can run OffgridPDF in two ways:
+
+#### Option A: Using Docker Compose (Recommended)
+
+This is the simplest way to get started with minimal setup:
+
+1. Make sure you have Docker and Docker Compose installed on your system
+2. Run the application with:
+
+```bash
+docker-compose up
+```
+
+3. Access the application at http://localhost:3000
+
+**Note**: You still need to install and run Ollama separately as shown in step 2 and 3.
+
+#### Option B: Manual Setup
+
+If you prefer to run the services without Docker, follow these steps:
+
+##### Set Up Backend
 
 Create and activate a virtual environment:
 
@@ -73,7 +96,7 @@ Install the required Python packages:
 pip install -r requirements.txt
 ```
 
-### 5. Set Up Frontend
+##### Set Up Frontend
 
 Navigate to the frontend directory and install the required packages:
 
@@ -90,7 +113,29 @@ npm install --legacy-peer-deps
 
 ## Running the Application
 
-### 1. Start the Backend Server
+### Option A: Using Docker Compose
+
+Start both the frontend and backend with a single command:
+
+```bash
+docker-compose up
+```
+
+This will build and start both services. To run in detached mode:
+
+```bash
+docker-compose up -d
+```
+
+To stop the services:
+
+```bash
+docker-compose down
+```
+
+### Option B: Manual Startup
+
+#### 1. Start the Backend Server
 
 Make sure your virtual environment is activated, then start the backend server:
 
@@ -99,7 +144,7 @@ Make sure your virtual environment is activated, then start the backend server:
 uvicorn backend.app.main:app --reload --port 8000
 ```
 
-### 2. Start the Frontend Development Server
+#### 2. Start the Frontend Development Server
 
 In a new terminal, navigate to the frontend directory and start the React development server:
 

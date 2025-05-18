@@ -7,7 +7,7 @@ logger = logging.getLogger(__name__)
 
 class LLMHandler:
     def __init__(self):
-        self.model = Ollama(model=settings.MODEL_NAME)
+        self.model = Ollama(model=settings.MODEL_NAME, base_url=settings.OLLAMA_BASE_URL)
 
     def generate_query_prompt(self) -> str:
         return """You are an AI assistant. Generate 2 different versions of the given user question 
