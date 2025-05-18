@@ -8,5 +8,6 @@ class Settings(BaseSettings):
     CHUNK_OVERLAP: int = 100
     VECTOR_DB_PATH: str = "faiss_index"
     DATA_DIR: str = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data")
+    OLLAMA_BASE_URL: str = "http://localhost:11434"
 
 settings = Settings()
