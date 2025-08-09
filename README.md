@@ -1,6 +1,6 @@
-# OffgridPDF
+# Offgrid PDF
 
-OffgridPDF is a 100% locally hosted PDF chat application that allows you to have interactive conversations with your PDF documents. Upload your PDF and start asking questions about its content - all while keeping your data completely private on your local machine.
+Offgrid PDF is a 100% locally hosted PDF chat application that allows you to have interactive conversations with your PDF documents. Upload your PDF and start asking questions about its content - all while keeping your data completely private on your local machine.
 
 ## Features
 
@@ -54,7 +54,7 @@ ollama serve
 
 ### 4. Choose Your Setup Method
 
-You can run OffgridPDF in two ways:
+You can run Offgrid PDF in two ways:
 
 #### Option A: Using Docker Compose (Recommended)
 
@@ -182,7 +182,7 @@ http://localhost:3000
 
 ## Architecture Overview
 
-OffgridPDF uses a modern web architecture:
+Offgrid PDF uses a modern web architecture:
 
 - **Backend**: FastAPI Python application handling PDF processing and AI interactions
 - **Frontend**: React-based single-page application with TypeScript
@@ -200,5 +200,6 @@ OffgridPDF uses a modern web architecture:
 - [LangChain](https://github.com/langchain-ai/langchain) for document processing
 - [FastAPI](https://fastapi.tiangolo.com/) for the backend framework
 - [React](https://reactjs.org/) for the frontend framework
+
 
 
