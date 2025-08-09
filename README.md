@@ -29,7 +29,7 @@ OffgridPDF is a 100% locally hosted PDF chat application that allows you to have
 
 ```bash
 git clone https://github.com/chandraprvkvsh/Offgrid-PDF.git
-cd offgrid-pdf
+cd Offgrid-PDF
 ```
 
 ### 2. Install Ollama
@@ -200,4 +200,5 @@ OffgridPDF uses a modern web architecture:
 - [LangChain](https://github.com/langchain-ai/langchain) for document processing
 - [FastAPI](https://fastapi.tiangolo.com/) for the backend framework
 - [React](https://reactjs.org/) for the frontend framework
+
 
